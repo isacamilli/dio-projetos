@@ -1,4 +1,5 @@
 from time import sleep
+import textwrap
 
 def menu():
 
@@ -8,8 +9,8 @@ def menu():
     [2]\tSacar
     [3]\tExtrato
     [4]\tNova conta
-    [5]\tListar contas
-    [6]\tNovo usuário
+    [5]\tNovo usuário
+    [6]\tListar contas
     [0]\tSair
     =>  """
     return input(menu)
@@ -93,7 +94,7 @@ def listar_contas(contas):
             Titular:\t{conta['usuario']['nome']}
         """
         print("=" * 100)
-        
+        print(textwrap.dedent(linha))
 
 
 def main():
